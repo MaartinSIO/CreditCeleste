@@ -1,0 +1,6 @@
+G:\SLAM4\csClient\csClient\bin\Debug\csClient.dll
+G:\SLAM4\csClient\csClient\bin\Debug\csClient.pdb
+G:\SLAM4\csClient\csClient\obj\Debug\csClient.csprojResolveAssemblyReference.cache
+G:\SLAM4\csClient\csClient\obj\Debug\csClient.csproj.CoreCompileInputs.cache
+G:\SLAM4\csClient\csClient\obj\Debug\csClient.dll
+G:\SLAM4\csClient\csClient\obj\Debug\csClient.pdb

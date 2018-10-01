@@ -1,0 +1,4 @@
+E:\Slam2\TpFinance\ClscCalcul\ClscCalcul\bin\Debug\ClscCalcul.dll
+E:\Slam2\TpFinance\ClscCalcul\ClscCalcul\bin\Debug\ClscCalcul.pdb
+E:\Slam2\TpFinance\ClscCalcul\ClscCalcul\obj\Debug\ClscCalcul.dll
+E:\Slam2\TpFinance\ClscCalcul\ClscCalcul\obj\Debug\ClscCalcul.pdb
