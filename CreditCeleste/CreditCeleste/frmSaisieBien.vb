@@ -91,5 +91,17 @@
 
     Private Sub cmdCredit_Click(sender As Object, e As EventArgs) Handles cmdCredit.Click
         'chainage vers le credit
+
+        If fenCredit Is Nothing Then
+            fenCredit = New frmCredit 'Design pattern : singleton
+        ElseIf fenCredit.IsDisposed Then
+            fenCredit = New frmCredit
+        End If
+
+
+        fenCredit.Show()  'affichage objet
+        fenCredit.BringToFront()
+        Me.Close()
+
     End Sub
 End Class

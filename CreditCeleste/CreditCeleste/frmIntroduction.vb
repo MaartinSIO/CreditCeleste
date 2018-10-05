@@ -147,4 +147,8 @@
         Me.Close()
 
     End Sub
+
+    Private Sub cboVendeur_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboVendeur.SelectedIndexChanged
+
+    End Sub
 End Class

@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="ClientVoit.vb" />
     <Compile Include="Concession.vb" />
+    <Compile Include="Credit.vb" />
     <Compile Include="frmAccueil.vb">
       <SubType>Form</SubType>
     </Compile>

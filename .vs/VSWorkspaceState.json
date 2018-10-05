@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CreditCeleste"
+    "\\CreditCeleste",
+    "\\CreditCeleste\\CreditCeleste"
   ],
-  "SelectedNode": "\\CreditCeleste\\CreditCeleste.sln",
+  "SelectedNode": "\\CreditCeleste\\CreditCeleste\\frmCredit.vb",
   "PreviewInSolutionExplorer": false
 }

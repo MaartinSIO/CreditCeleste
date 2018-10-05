@@ -11,4 +11,5 @@
 
     Public uneVoiture As New Voiture ' la voiture appartient au client 
     Public unClientVoit As New ClientVoit
+    Public unCredit As New Credit
 End Module
