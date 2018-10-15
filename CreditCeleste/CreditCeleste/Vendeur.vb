@@ -20,6 +20,12 @@
 
     End Sub
 
+    Sub New(ByVal nomVendeur As String, prenomVendeur As String)
+        monNomVendeur = nomVendeur
+        monPrenomVendeur = prenomVendeur
+
+    End Sub
+
     Public Function getVendeur() As String
 
         Return monIdtVendeur + " " + monNomVendeur + " " + monPrenomVendeur

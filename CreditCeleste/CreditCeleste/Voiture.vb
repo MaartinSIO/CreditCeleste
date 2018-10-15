@@ -68,7 +68,7 @@
 
     End Function
 
-    Public Function getAgeVehiculee() As String
+    Public Function getAgeVehicule() As String
 
         Return MonAgeVehicule
 

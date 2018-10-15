@@ -6,16 +6,12 @@
 
 
     Private Sub frmIntroduction_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        fenIntro.BringToFront()
-        Me.Hide()
-
 
         'affichage des vendeurs
 
         'lire les vendeurs de la concession
         For Each xVendeur In uneConcession.lesVendeurs
             cboVendeur.Items.Add(xVendeur.getVendeur())
-            
         Next
 
         'de l'objet vers l'ecran
@@ -23,18 +19,35 @@
         txtAncVeh.Text = uneVoiture.getAncVehicule()
 
         'gestion de l'age du véhicule
-
-
-        'charger le client de l'objert  vers l'ecran
+        'charger le client de l'objet  vers l'ecran
         txtNom.Text = unClientVoit.getnomClient()
         txtPrenom.Text = unClientVoit.getprenomClient()
         cboCidt.Text = unClientVoit.getcidt()
 
 
+        'charger le radio bouton
+        i = 0
+        radio = gpbAge.Controls(i)
+        age = uneVoiture.getAgeVehicule()
+
         'Do While radio.Checked = False And i < gpbAge.Controls.Count - 1
-        '    i = i + 1 ' i+=1
         '    radio = gpbAge.Controls(i)
+        '    If age = radio.Text Then
+        '        radio.Checked = True
+        '    Else
+        '        i = i + 1
+        '    End If
+
         'Loop
+
+        ''TO Do amélioration possible pour ne pas faire tout le tab
+
+        For i = 0 To gpbAge.Controls.Count - 1
+            radio = gpbAge.Controls(i) 'cast explicicte
+            If age = radio.Text Then
+                radio.Checked = True
+            End If
+        Next
 
 
 
@@ -103,6 +116,7 @@
         'Je m'arrête au bon endroit, pas beoin de parcourir toutes la liste
 
         age = radio.Text
+
         uneVoiture.setAgeVehicule(age)
 
         MsgBox(age + "     => " + "Enregistré")
@@ -112,7 +126,7 @@
     Private Sub cmdBien_Click(sender As Object, e As EventArgs) Handles cmdBien.Click
         'permet de saisr les infos du bien
         '
-
+  
 
 
         If fenBien Is Nothing Then
@@ -148,7 +162,7 @@
 
     End Sub
 
-    Private Sub cboVendeur_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboVendeur.SelectedIndexChanged
+    Private Sub rdbNeuf_CheckedChanged(sender As Object, e As EventArgs) Handles rdbNeuf.CheckedChanged
 
     End Sub
 End Class

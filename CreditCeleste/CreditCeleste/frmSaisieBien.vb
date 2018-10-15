@@ -1,11 +1,17 @@
-﻿Public Class frmSaisieBien
+﻿Imports System.Data.SqlClient
+
+
+
+Public Class frmSaisieBien
 
     Dim age As String 'age de la voiture
     Dim i As Integer
     Dim radio As RadioButton
 
     Private Sub frmSaisieBien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        fenBien.BringToFront()
+
+
+
 
         lblAncVeh.Text = uneVoiture.getAncVehicule()
         txtDate1Imm.Text = uneVoiture.getDatePremiereImmatriculation()
@@ -13,28 +19,24 @@
         txtNumImm.Text = uneVoiture.getNumeroImmatriculation()
         txtNumSer.Text = uneVoiture.getNumeroSerie()
         txtPuiss.Text = uneVoiture.getPuissance()
-        ''test
 
-        'i = 0
-        'age = uneVoiture.getAgeVehiculee()
+        'pour ré afficher le radio bouton sur l'age de la voiture
+        i = 0
+        age = uneVoiture.getAgeVehicule()
+        radio = gpbAge.Controls(i)
+        Do While radio.Checked = False And i < gpbAge.Controls.Count - 1
+            radio = gpbAge.Controls(i)
+            If age = radio.Text Then
+                radio.Checked = True
+            Else
+                i = i + 1
+            End If
 
-
-        'radio = gpbAge.Controls(i)
-
-
-        'Do While radio.Checked = False And i < gpbAge.Controls.Count - 1
-        '    i = i + 1 ' i+=1
-        '    radio = gpbAge.Controls(i)
-        'Loop
-
-        'If age = rdbNeuf.Text Then
-        '    gpbAge.Controls(i).Checked
+        Loop
 
 
-        'End If
 
 
-        ''
     End Sub
 
     Private Sub cmdIntro_Click(sender As Object, e As EventArgs) Handles cmdIntro.Click
@@ -58,20 +60,8 @@
 
     Private Sub cmdEnr_Click(sender As Object, e As EventArgs) Handles cmdEnr.Click
 
-        Dim datePremiereImmatriculation As String
-        Dim anneeModele As String
-        Dim numeroImmatriculation As String
-        Dim numeroSerie As String
-        Dim puissance As String
-
-        datePremiereImmatriculation = txtDate1Imm.Text
-        anneeModele = txtAnnMod.Text
-        numeroImmatriculation = txtNumImm.Text
-        numeroSerie = txtNumSer.Text
-        puissance = txtPuiss.Text
-
         uneVoiture = New Voiture()
-        uneVoiture.setVehicule(datePremiereImmatriculation, anneeModele, numeroImmatriculation, numeroSerie, puissance)
+        uneVoiture.setVehicule(txtDate1Imm.Text, txtAnnMod.Text, txtNumImm.Text, txtNumSer.Text, txtPuiss.Text)
         MsgBox(uneVoiture.getVehiculeAff() + "    => " + "Enregistré")
 
 
@@ -85,13 +75,40 @@
         age = radio.Text
         uneVoiture.setAgeVehicule(age)
 
+        'Sauvegarde dans la BDD
 
+        'Mettre la table et les champs associés 
+        Dim strRequete As String = "INSERT INTO [dbo].[VEHICULE]
+                                  ()
+                                  VALUES
+                                  (lblAncVeh.Text, txtDate1Imm.Text, txtAnnMod.Text, txtNumImm.Text, txtNumSer.Text, txtPuiss.Text)"
+        Try
+
+            '//connexion à la BDD
+
+            Dim oConnexion As SqlConnection = New SqlConnection(strConnexion)
+
+            '//lancer ma commande
+            Dim oCommand As SqlCommand = New SqlCommand(strRequete, oConnexion)
+
+            '//ouvrir la BDD
+            oConnexion.Open()
+            oCommand.ExecuteNonQuery()
+
+
+
+            oConnexion.Close()
+
+        Catch ex As Exception
+
+            Console.WriteLine("Erreur : " + ex.Message)
+
+        End Try
 
     End Sub
 
     Private Sub cmdCredit_Click(sender As Object, e As EventArgs) Handles cmdCredit.Click
         'chainage vers le credit
-
         If fenCredit Is Nothing Then
             fenCredit = New frmCredit 'Design pattern : singleton
         ElseIf fenCredit.IsDisposed Then
@@ -102,6 +119,7 @@
         fenCredit.Show()  'affichage objet
         fenCredit.BringToFront()
         Me.Close()
+
 
     End Sub
 End Class

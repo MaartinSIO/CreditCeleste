@@ -2,41 +2,26 @@
 Imports System.Data.SqlClient
 
 Public Class frmCredit
-    Private taux1 As Double
-    Private duree1 As Double
-    Private mensualite1 As Double
-    Private montant1 As Double
+
     Private Sub frmCredit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'objet vers ecran TO DO MS
+
+        montant.Text = unCredit.getmontant()
+        taux.Text = unCredit.getmontant()
+        duree.Text = unCredit.getmontant()
+
+
+
+
 
     End Sub
 
-    Private Sub taux_TextChanged(sender As System.Object, e As System.EventArgs) Handles taux.TextChanged
-        taux1 = Convert.ToDouble(taux.Text)
 
-    End Sub
-
-    Private Sub montant_TextChanged(sender As System.Object, e As System.EventArgs) Handles montant.TextChanged
-        montant1 = Convert.ToDouble(montant.Text)
-    End Sub
-
-    Private Sub duree_TextChanged(sender As System.Object, e As System.EventArgs) Handles duree.TextChanged
-        duree1 = Convert.ToDouble(duree.Text)
-
-    End Sub
-
-    Private Sub mensualite_TextChanged(sender As System.Object, e As System.EventArgs) Handles mensualite.TextChanged
-
-    End Sub
 
     Private Sub Btn_Click(sender As System.Object, e As System.EventArgs) Handles Btn.Click
-        Dim Credit = New ClscCalcul.Calcul(taux1, montant1, duree1)
+        Dim Credit = New credit(montant.Text, montant.Text, duree.Text)
 
-        mensualite1 = Credit.calcmensualite()
-        mensualite.Text = mensualite1
-
-
-
-
+        mensualite.Text = Credit.calcmensualite()
 
 
     End Sub
@@ -56,24 +41,10 @@ Public Class frmCredit
     End Sub
 
     Private Sub CmdEnrCredit_Click(sender As Object, e As EventArgs) Handles CmdEnrCredit.Click
-
-
-        unCredit.setCredit(mensualite.Text, montant.Text, taux.Text)
-        MsgBox(unCredit.getCredit())
-
-    End Sub
-    Private Sub cmdConnexion_Click(sender As Object, e As EventArgs) Handles cmdConnexion.Click
-        'unCredit.setCredit(mensualite.Text, montant.Text, taux.Text)
-
-        lblConnexion.Text = "connecté"
-
-
-        Dim strConnexion As String = "Data Source=172.16.12.99;User Id=connEleveSio;password=mdpEleveSio;Initial Catalog=KREYDER-CreditCeleste"
-        'Authentification sqlServeur
-
-
-        'requete
-        Dim strRequete As String = "SELECT NomVendeur, PrenomVendeur FROM VENDEUR"
+        Dim strRequete As String = "INSERT INTO [dbo].[CREDIT]
+                                  (Montantfinance, NombreMensualites, MontantMensualites, TauxAnnuel, ClientCredit)
+                                  VALUES
+                                  (1000, 48, 201, 2.92,'Schultz')"
 
         Try
 
@@ -86,10 +57,11 @@ Public Class frmCredit
 
             '//ouvrir la BDD
             oConnexion.Open()
-            '//
+            oCommand.ExecuteNonQuery()
+
             '//se positionner sur le premier objet
 
-            Dim oReader As SqlDataReader = oCommand.ExecuteReader()
+            'Dim oReader As SqlDataReader = oCommand.ExecuteReader()
 
             '//lire l'enregistrement
             '//
@@ -100,14 +72,15 @@ Public Class frmCredit
             'Console.WriteLine(oReader("NomVendeur") + " " + oReader("PrenomVendeur"))
 
 
-            While (oReader.Read())
+            'While (oReader.Read())
 
-                '//affiche tout les lignes de la requete
-                Console.WriteLine(oReader.GetValue(0) + " " + oReader.GetValue(1))
+            '    '//affiche tout les lignes de la requete
+            '    Console.WriteLine(oReader.GetValue(0) + " " + oReader.GetValue(1))
 
-            End While
+            'End While
+            'oReader.Close()
 
-            oReader.Close()
+
             oConnexion.Close()
 
         Catch ex As Exception
@@ -116,12 +89,31 @@ Public Class frmCredit
 
         End Try
 
+        unCredit.setCredit(montant.Text, taux.Text, mensualite.Text, taux.Text)
+        MsgBox(unCredit.getCredit())
+
+    End Sub
+    Private Sub cmdConnexion_Click(sender As Object, e As EventArgs) Handles cmdConnexion.Click
+
+        'lblConnexion.Text = "connecté"
 
 
 
 
     End Sub
 
+    Private Sub cmdBien_Click(sender As Object, e As EventArgs) Handles cmdBien.Click
+
+        If fenBien Is Nothing Then
+            fenBien = New frmSaisieBien 'Design pattern : singleton
+        ElseIf fenBien.IsDisposed Then
+            fenBien = New frmSaisieBien
+        End If
 
 
+        fenBien.Show()  'affichage objet
+        fenBien.BringToFront()
+        Me.Close()
+
+    End Sub
 End Class

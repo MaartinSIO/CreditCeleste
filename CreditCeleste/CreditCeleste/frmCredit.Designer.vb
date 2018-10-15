@@ -35,6 +35,7 @@ Partial Class frmCredit
         Me.CmdEnrCredit = New System.Windows.Forms.Button()
         Me.cmdConnexion = New System.Windows.Forms.Button()
         Me.lblConnexion = New System.Windows.Forms.Label()
+        Me.cmdBien = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lbl2
@@ -107,7 +108,7 @@ Partial Class frmCredit
         Me.Btn.Name = "Btn"
         Me.Btn.Size = New System.Drawing.Size(75, 23)
         Me.Btn.TabIndex = 11
-        Me.Btn.Text = "Validez"
+        Me.Btn.Text = "Valider"
         Me.Btn.UseVisualStyleBackColor = True
         '
         'cmdIntroduction
@@ -146,11 +147,21 @@ Partial Class frmCredit
         Me.lblConnexion.TabIndex = 23
         Me.lblConnexion.Text = "non Conecté"
         '
+        'cmdBien
+        '
+        Me.cmdBien.Location = New System.Drawing.Point(497, 259)
+        Me.cmdBien.Name = "cmdBien"
+        Me.cmdBien.Size = New System.Drawing.Size(75, 23)
+        Me.cmdBien.TabIndex = 24
+        Me.cmdBien.Text = "Voiture"
+        Me.cmdBien.UseVisualStyleBackColor = True
+        '
         'frmCredit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(599, 366)
+        Me.Controls.Add(Me.cmdBien)
         Me.Controls.Add(Me.lblConnexion)
         Me.Controls.Add(Me.cmdConnexion)
         Me.Controls.Add(Me.CmdEnrCredit)
@@ -185,4 +196,5 @@ Partial Class frmCredit
     Friend WithEvents CmdEnrCredit As Button
     Friend WithEvents cmdConnexion As Button
     Friend WithEvents lblConnexion As Label
+    Friend WithEvents cmdBien As Button
 End Class

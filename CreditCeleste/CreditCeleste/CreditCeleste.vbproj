@@ -47,7 +47,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClscCalcul">
+    <Reference Include="ClscCalcul, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ClscCalcul\ClscCalcul\bin\Debug\ClscCalcul.dll</HintPath>
     </Reference>
     <Reference Include="csClient">
@@ -80,7 +81,6 @@
   <ItemGroup>
     <Compile Include="ClientVoit.vb" />
     <Compile Include="Concession.vb" />
-    <Compile Include="Credit.vb" />
     <Compile Include="frmAccueil.vb">
       <SubType>Form</SubType>
     </Compile>
