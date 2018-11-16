@@ -1,4 +1,4 @@
-﻿Imports ClscCalcul
+Imports ClscCalcul
 Imports System.Data.SqlClient
 
 Public Class frmCredit
@@ -19,7 +19,7 @@ Public Class frmCredit
 
 
     Private Sub Btn_Click(sender As System.Object, e As System.EventArgs) Handles Btn.Click
-        Dim Credit = New credit(montant.Text, montant.Text, duree.Text)
+        Dim Credit = New credit(taux.Text, montant.Text, duree.Text)
 
         mensualite.Text = Credit.calcmensualite()
 
