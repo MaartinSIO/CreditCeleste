@@ -15,6 +15,11 @@ namespace csClient
         private string adresseClient;
 
 
+        private  string codePostaleClient;
+        private string villeClient;
+        private string telephoneClient;
+
+
         public Client()
         {
             numeroClient = 0;
@@ -41,7 +46,7 @@ namespace csClient
             adresseClient = adresseCli;
         }
 
-
+            // set 
         public void setnumClient(int numeroCli)
         {
             numeroClient = numeroCli;
@@ -60,10 +65,33 @@ namespace csClient
             cidt = cidtCli;
         }
 
+
+
+
         public void setadresseClient(string adresseCli)
         {
             adresseClient = adresseCli;
         }
+
+        public  void setcodePostaleClient(string codePostaleCli)
+        {
+            codePostaleClient = codePostaleCli;
+        }
+
+
+        public void setvilleClient(string villeCli)
+        {
+            villeClient = villeCli;
+        }
+
+        public void settelephoneClient(string telephoneCli)
+        {
+            telephoneClient = telephoneCli;
+        }
+
+
+
+        // get
 
         public int getnumeroClient()
         {
@@ -83,10 +111,57 @@ namespace csClient
         {
             return cidt;
         }
+
+
         public string getadresseClient()
         {
             return adresseClient;
         }
+
+        public string getcodePostaleClient()
+        {
+            return codePostaleClient;
+        }
+
+        public string getvilleClient()
+        {
+            return villeClient;
+        }
+        public string gettelephoneClient()
+        {
+            return telephoneClient;
+        }
+
+
+        // propriété : (exemple)       // equivalent au get et set // autre maniere existe
+        /*
+        public string VilleClient
+        {
+            get
+            {
+                return villeClient
+            }
+            set
+            {
+                villeClient = value;
+            }
+        }
+
+
+         public string TelephoneClient
+                {
+                    get
+                    {
+                        return telephoneClient
+                    }
+                    set
+                    {
+                        telephoneClient = value;
+                    }
+                }
+        */
+
+
 
     }
 

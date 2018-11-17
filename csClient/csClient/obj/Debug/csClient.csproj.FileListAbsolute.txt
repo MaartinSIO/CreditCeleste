@@ -4,3 +4,9 @@ G:\SLAM4\csClient\csClient\obj\Debug\csClient.csprojResolveAssemblyReference.cac
 G:\SLAM4\csClient\csClient\obj\Debug\csClient.csproj.CoreCompileInputs.cache
 G:\SLAM4\csClient\csClient\obj\Debug\csClient.dll
 G:\SLAM4\csClient\csClient\obj\Debug\csClient.pdb
+D:\SchultzMartin2SLAM\CreditCelesteSchultzMartin\csClient\csClient\bin\Debug\csClient.dll
+D:\SchultzMartin2SLAM\CreditCelesteSchultzMartin\csClient\csClient\bin\Debug\csClient.pdb
+D:\SchultzMartin2SLAM\CreditCelesteSchultzMartin\csClient\csClient\obj\Debug\csClient.csprojResolveAssemblyReference.cache
+D:\SchultzMartin2SLAM\CreditCelesteSchultzMartin\csClient\csClient\obj\Debug\csClient.csproj.CoreCompileInputs.cache
+D:\SchultzMartin2SLAM\CreditCelesteSchultzMartin\csClient\csClient\obj\Debug\csClient.dll
+D:\SchultzMartin2SLAM\CreditCelesteSchultzMartin\csClient\csClient\obj\Debug\csClient.pdb

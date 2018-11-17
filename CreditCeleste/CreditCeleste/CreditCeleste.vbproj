@@ -51,7 +51,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ClscCalcul\ClscCalcul\bin\Debug\ClscCalcul.dll</HintPath>
     </Reference>
-    <Reference Include="csClient">
+    <Reference Include="csClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\csClient\csClient\bin\Debug\csClient.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -86,6 +87,12 @@
     </Compile>
     <Compile Include="frmAccueil.Designer.vb">
       <DependentUpon>frmAccueil.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClient.Designer.vb">
+      <DependentUpon>frmClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClient.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCredit.Designer.vb">
@@ -123,12 +130,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Persistance.vb" />
     <Compile Include="Vendeur.vb" />
     <Compile Include="Voiture.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmAccueil.resx">
       <DependentUpon>frmAccueil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClient.resx">
+      <DependentUpon>frmClient.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCredit.resx">
       <DependentUpon>frmCredit.vb</DependentUpon>

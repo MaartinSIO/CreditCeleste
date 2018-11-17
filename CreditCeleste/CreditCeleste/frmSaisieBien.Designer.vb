@@ -41,6 +41,7 @@ Partial Class frmSaisieBien
         Me.rdbOcc3a5 = New System.Windows.Forms.RadioButton()
         Me.rdbOcc3 = New System.Windows.Forms.RadioButton()
         Me.rdbNeuf = New System.Windows.Forms.RadioButton()
+        Me.cmdClient = New System.Windows.Forms.Button()
         Me.gpbAge.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -215,11 +216,21 @@ Partial Class frmSaisieBien
         Me.rdbNeuf.Text = "Neuf"
         Me.rdbNeuf.UseVisualStyleBackColor = True
         '
+        'cmdClient
+        '
+        Me.cmdClient.Location = New System.Drawing.Point(593, 377)
+        Me.cmdClient.Name = "cmdClient"
+        Me.cmdClient.Size = New System.Drawing.Size(75, 23)
+        Me.cmdClient.TabIndex = 26
+        Me.cmdClient.Text = "Client"
+        Me.cmdClient.UseVisualStyleBackColor = True
+        '
         'frmSaisieBien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.cmdClient)
         Me.Controls.Add(Me.gpbAge)
         Me.Controls.Add(Me.lblAncVeh)
         Me.Controls.Add(Me.cmdCredit)
@@ -262,4 +273,5 @@ Partial Class frmSaisieBien
     Friend WithEvents rdbOcc3a5 As RadioButton
     Friend WithEvents rdbOcc3 As RadioButton
     Friend WithEvents rdbNeuf As RadioButton
+    Friend WithEvents cmdClient As Button
 End Class

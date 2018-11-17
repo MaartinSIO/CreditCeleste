@@ -43,6 +43,7 @@ Partial Class frmIntroduction
         Me.cmdPlus = New System.Windows.Forms.Button()
         Me.txtAncVeh = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.cmdClient = New System.Windows.Forms.Button()
         Me.gpbAge.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -50,75 +51,67 @@ Partial Class frmIntroduction
         '
         Me.cboCidt.FormattingEnabled = True
         Me.cboCidt.Items.AddRange(New Object() {"Madame", "Mademoiselle", "Monsieur"})
-        Me.cboCidt.Location = New System.Drawing.Point(85, 89)
-        Me.cboCidt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboCidt.Location = New System.Drawing.Point(64, 72)
         Me.cboCidt.Name = "cboCidt"
-        Me.cboCidt.Size = New System.Drawing.Size(160, 24)
+        Me.cboCidt.Size = New System.Drawing.Size(121, 21)
         Me.cboCidt.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(85, 65)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(64, 53)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 17)
+        Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Je m'appelle"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(85, 164)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(64, 133)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 17)
+        Me.Label2.Size = New System.Drawing.Size(29, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nom"
         '
         'txtNom
         '
-        Me.txtNom.Location = New System.Drawing.Point(85, 135)
-        Me.txtNom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNom.Location = New System.Drawing.Point(64, 110)
         Me.txtNom.Name = "txtNom"
-        Me.txtNom.Size = New System.Drawing.Size(132, 22)
+        Me.txtNom.Size = New System.Drawing.Size(100, 20)
         Me.txtNom.TabIndex = 3
         '
         'txtPrenom
         '
-        Me.txtPrenom.Location = New System.Drawing.Point(85, 204)
-        Me.txtPrenom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPrenom.Location = New System.Drawing.Point(64, 166)
         Me.txtPrenom.Name = "txtPrenom"
-        Me.txtPrenom.Size = New System.Drawing.Size(132, 22)
+        Me.txtPrenom.Size = New System.Drawing.Size(100, 20)
         Me.txtPrenom.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(85, 233)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(64, 189)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 17)
+        Me.Label3.Size = New System.Drawing.Size(43, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Prenom"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(85, 383)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(64, 311)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(62, 17)
+        Me.Label4.Size = New System.Drawing.Size(47, 13)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Vendeur"
         '
         'cboVendeur
         '
         Me.cboVendeur.FormattingEnabled = True
-        Me.cboVendeur.Location = New System.Drawing.Point(89, 402)
-        Me.cboVendeur.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboVendeur.Location = New System.Drawing.Point(67, 327)
         Me.cboVendeur.Name = "cboVendeur"
-        Me.cboVendeur.Size = New System.Drawing.Size(160, 24)
+        Me.cboVendeur.Size = New System.Drawing.Size(121, 21)
         Me.cboVendeur.TabIndex = 7
         '
         'gpbAge
@@ -127,11 +120,9 @@ Partial Class frmIntroduction
         Me.gpbAge.Controls.Add(Me.rdbOcc3a5)
         Me.gpbAge.Controls.Add(Me.rdbOcc3)
         Me.gpbAge.Controls.Add(Me.rdbNeuf)
-        Me.gpbAge.Location = New System.Drawing.Point(356, 298)
-        Me.gpbAge.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbAge.Location = New System.Drawing.Point(267, 242)
         Me.gpbAge.Name = "gpbAge"
-        Me.gpbAge.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.gpbAge.Size = New System.Drawing.Size(217, 155)
+        Me.gpbAge.Size = New System.Drawing.Size(163, 126)
         Me.gpbAge.TabIndex = 8
         Me.gpbAge.TabStop = False
         Me.gpbAge.Text = "Age du véhicule"
@@ -139,10 +130,9 @@ Partial Class frmIntroduction
         'rdbOcc5
         '
         Me.rdbOcc5.AutoSize = True
-        Me.rdbOcc5.Location = New System.Drawing.Point(8, 113)
-        Me.rdbOcc5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rdbOcc5.Location = New System.Drawing.Point(6, 92)
         Me.rdbOcc5.Name = "rdbOcc5"
-        Me.rdbOcc5.Size = New System.Drawing.Size(171, 21)
+        Me.rdbOcc5.Size = New System.Drawing.Size(132, 17)
         Me.rdbOcc5.TabIndex = 3
         Me.rdbOcc5.Text = "Occasion de 5ans et +"
         Me.rdbOcc5.UseVisualStyleBackColor = True
@@ -150,10 +140,9 @@ Partial Class frmIntroduction
         'rdbOcc3a5
         '
         Me.rdbOcc3a5.AutoSize = True
-        Me.rdbOcc3a5.Location = New System.Drawing.Point(7, 80)
-        Me.rdbOcc3a5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rdbOcc3a5.Location = New System.Drawing.Point(5, 65)
         Me.rdbOcc3a5.Name = "rdbOcc3a5"
-        Me.rdbOcc3a5.Size = New System.Drawing.Size(167, 21)
+        Me.rdbOcc3a5.Size = New System.Drawing.Size(129, 17)
         Me.rdbOcc3a5.TabIndex = 2
         Me.rdbOcc3a5.Text = "Occasion de 3 à 5ans"
         Me.rdbOcc3a5.UseVisualStyleBackColor = True
@@ -161,10 +150,9 @@ Partial Class frmIntroduction
         'rdbOcc3
         '
         Me.rdbOcc3.AutoSize = True
-        Me.rdbOcc3.Location = New System.Drawing.Point(7, 52)
-        Me.rdbOcc3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rdbOcc3.Location = New System.Drawing.Point(5, 42)
         Me.rdbOcc3.Name = "rdbOcc3"
-        Me.rdbOcc3.Size = New System.Drawing.Size(152, 21)
+        Me.rdbOcc3.Size = New System.Drawing.Size(117, 17)
         Me.rdbOcc3.TabIndex = 1
         Me.rdbOcc3.Text = "Occasion de - 3ans"
         Me.rdbOcc3.UseVisualStyleBackColor = True
@@ -173,10 +161,9 @@ Partial Class frmIntroduction
         '
         Me.rdbNeuf.AutoSize = True
         Me.rdbNeuf.Checked = True
-        Me.rdbNeuf.Location = New System.Drawing.Point(8, 23)
-        Me.rdbNeuf.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rdbNeuf.Location = New System.Drawing.Point(6, 19)
         Me.rdbNeuf.Name = "rdbNeuf"
-        Me.rdbNeuf.Size = New System.Drawing.Size(59, 21)
+        Me.rdbNeuf.Size = New System.Drawing.Size(48, 17)
         Me.rdbNeuf.TabIndex = 0
         Me.rdbNeuf.TabStop = True
         Me.rdbNeuf.Text = "Neuf"
@@ -184,85 +171,87 @@ Partial Class frmIntroduction
         '
         'txtNouVeh
         '
-        Me.txtNouVeh.Location = New System.Drawing.Point(356, 135)
-        Me.txtNouVeh.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNouVeh.Location = New System.Drawing.Point(267, 110)
         Me.txtNouVeh.Name = "txtNouVeh"
-        Me.txtNouVeh.Size = New System.Drawing.Size(161, 22)
+        Me.txtNouVeh.Size = New System.Drawing.Size(122, 20)
         Me.txtNouVeh.TabIndex = 10
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(352, 89)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(264, 72)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(152, 17)
+        Me.Label5.Size = New System.Drawing.Size(118, 13)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Mon Nouveau véhicule"
         '
         'cmdEnr
         '
-        Me.cmdEnr.Location = New System.Drawing.Point(149, 482)
-        Me.cmdEnr.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmdEnr.Location = New System.Drawing.Point(112, 392)
         Me.cmdEnr.Name = "cmdEnr"
-        Me.cmdEnr.Size = New System.Drawing.Size(100, 28)
+        Me.cmdEnr.Size = New System.Drawing.Size(75, 23)
         Me.cmdEnr.TabIndex = 11
         Me.cmdEnr.Text = "J'enregistre"
         Me.cmdEnr.UseVisualStyleBackColor = True
         '
         'cmdBien
         '
-        Me.cmdBien.Location = New System.Drawing.Point(336, 482)
-        Me.cmdBien.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmdBien.Location = New System.Drawing.Point(252, 392)
         Me.cmdBien.Name = "cmdBien"
-        Me.cmdBien.Size = New System.Drawing.Size(100, 28)
+        Me.cmdBien.Size = New System.Drawing.Size(75, 23)
         Me.cmdBien.TabIndex = 12
         Me.cmdBien.Text = "Voiture"
         Me.cmdBien.UseVisualStyleBackColor = True
         '
         'cmdCredit
         '
-        Me.cmdCredit.Location = New System.Drawing.Point(512, 482)
-        Me.cmdCredit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmdCredit.Location = New System.Drawing.Point(384, 392)
         Me.cmdCredit.Name = "cmdCredit"
-        Me.cmdCredit.Size = New System.Drawing.Size(100, 28)
+        Me.cmdCredit.Size = New System.Drawing.Size(75, 23)
         Me.cmdCredit.TabIndex = 13
         Me.cmdCredit.Text = "Crédit"
         Me.cmdCredit.UseVisualStyleBackColor = True
         '
         'cmdPlus
         '
-        Me.cmdPlus.Location = New System.Drawing.Point(855, 482)
-        Me.cmdPlus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmdPlus.Location = New System.Drawing.Point(641, 392)
         Me.cmdPlus.Name = "cmdPlus"
-        Me.cmdPlus.Size = New System.Drawing.Size(100, 28)
+        Me.cmdPlus.Size = New System.Drawing.Size(75, 23)
         Me.cmdPlus.TabIndex = 14
         Me.cmdPlus.Text = "Plus..."
         Me.cmdPlus.UseVisualStyleBackColor = True
         '
         'txtAncVeh
         '
-        Me.txtAncVeh.Location = New System.Drawing.Point(356, 233)
-        Me.txtAncVeh.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtAncVeh.Location = New System.Drawing.Point(267, 189)
         Me.txtAncVeh.Name = "txtAncVeh"
-        Me.txtAncVeh.Size = New System.Drawing.Size(161, 22)
+        Me.txtAncVeh.Size = New System.Drawing.Size(122, 20)
         Me.txtAncVeh.TabIndex = 16
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(352, 204)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(264, 166)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(138, 17)
+        Me.Label6.Size = New System.Drawing.Size(107, 13)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Mon Ancien véhicule"
         '
+        'cmdClient
+        '
+        Me.cmdClient.Location = New System.Drawing.Point(512, 392)
+        Me.cmdClient.Name = "cmdClient"
+        Me.cmdClient.Size = New System.Drawing.Size(75, 23)
+        Me.cmdClient.TabIndex = 17
+        Me.cmdClient.Text = "Client"
+        Me.cmdClient.UseVisualStyleBackColor = True
+        '
         'frmIntroduction
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.cmdClient)
         Me.Controls.Add(Me.txtAncVeh)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cmdPlus)
@@ -280,7 +269,6 @@ Partial Class frmIntroduction
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboCidt)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmIntroduction"
         Me.Text = "frmIntroduction"
         Me.gpbAge.ResumeLayout(False)
@@ -311,4 +299,5 @@ Partial Class frmIntroduction
     Friend WithEvents cmdPlus As Button
     Friend WithEvents txtAncVeh As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents cmdClient As Button
 End Class

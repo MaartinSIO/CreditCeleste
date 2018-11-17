@@ -27,6 +27,12 @@ namespace ClscCalcul
 
         public double calcmensualite()
         {
+            //double mesualiteHorsTaux;
+            //temp = Math.Pow(1 + taux, duree);
+            //mensualite = montant * (taux / 1 - temp);
+
+            //mesualiteHorsTaux = (montant / duree);
+            //mensualite = mesualiteHorsTaux * (1 + taux);
             double mensualite;
             double test1;
             double test2;
@@ -35,6 +41,7 @@ namespace ClscCalcul
             test2 = 1 - (Math.Pow(1 + (taux / 12), -duree));
             mensualite = test1 / test2;
             return (mensualite);
+
         }
 
         public double getmensualite()

@@ -1,24 +1,20 @@
-Imports ClscCalcul
+﻿Imports ClscCalcul
 Imports System.Data.SqlClient
 
 Public Class frmCredit
 
     Private Sub frmCredit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'objet vers ecran TO DO MS
 
         montant.Text = unCredit.getmontant()
         taux.Text = unCredit.getmontant()
         duree.Text = unCredit.getmontant()
 
-
-
-
-
     End Sub
 
 
 
-    Private Sub Btn_Click(sender As System.Object, e As System.EventArgs) Handles Btn.Click
+    Private Sub BtnValider_Click(sender As System.Object, e As System.EventArgs) Handles BtnValider.Click
+
         Dim Credit = New credit(taux.Text, montant.Text, duree.Text)
 
         mensualite.Text = Credit.calcmensualite()
@@ -41,6 +37,12 @@ Public Class frmCredit
     End Sub
 
     Private Sub CmdEnrCredit_Click(sender As Object, e As EventArgs) Handles CmdEnrCredit.Click
+
+
+        Dim snumber As String = ""
+        Dim retMessage As String = "Mise a jour impossible"
+
+
         Dim strRequete As String = "INSERT INTO [dbo].[CREDIT]
                                   (Montantfinance, NombreMensualites, MontantMensualites, TauxAnnuel, ClientCredit)
                                   VALUES
@@ -95,7 +97,10 @@ Public Class frmCredit
     End Sub
     Private Sub cmdConnexion_Click(sender As Object, e As EventArgs) Handles cmdConnexion.Click
 
-        'lblConnexion.Text = "connecté"
+        'utiliser une classe de persistance
+
+        Persistance.versBddCredit() 'methode d'objet 
+
 
 
 
@@ -113,6 +118,21 @@ Public Class frmCredit
 
         fenBien.Show()  'affichage objet
         fenBien.BringToFront()
+        Me.Close()
+
+    End Sub
+
+    Private Sub cmdClient_Click(sender As Object, e As EventArgs) Handles cmdClient.Click
+
+        If fenClient Is Nothing Then
+            fenClient = New frmClient 'Design pattern : singleton
+        ElseIf fenClient.IsDisposed Then
+            fenClient = New frmClient
+        End If
+
+
+        fenClient.Show()  'affichage objet
+        fenClient.BringToFront()
         Me.Close()
 
     End Sub

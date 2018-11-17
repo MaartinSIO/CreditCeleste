@@ -58,52 +58,11 @@
         uneVoiture.setNouvVehicule(txtNouVeh.Text)
         uneVoiture.setAncVehicule(txtAncVeh.Text)
 
-
-        'stockage des des donnnées dans les objets 
-        '-le client
-        'mettre a jour code identifiant nom prenom
-        '2 possibilité
-        'soit méthode qui renseigne des attribut privés
-        'soit 3 méthode avec chaque fois un attribut
-
-        unClientVoit.setcidt(cboCidt.Text)
-        unClientVoit.setNomClient(txtNom.Text)
-        unClientVoit.setprenomClient(txtPrenom.Text)
-
-        '-les données du vehicule
-        'age de la voiture
-
-        '1ère methode
-
-        'If rdbNeuf.Checked Then
-        '    'le bouton est coché
-        '    age = rdbNeuf.Text
-        'ElseIf rdbOcc3.Checked Then
-        '    age = rdbOcc3.Text
-        'ElseIf rdbOcc3a5.Checked Then
-        '    age = rdbOcc3a5.Text
-        'Else
-        '    age = rdbOcc5.Text
-        'End If
-
-        ''2ème méthode 
+        unClient.setcidt(cboCidt.Text)
+        unClient.setnomClient(txtNom.Text)
+        unClient.setprenomClient(txtPrenom.Text)
 
 
-
-        'For i = 0 To gpbAge.Controls.Count - 1
-        '    radio = gpbAge.Controls(i) 'cast explicicte
-        '    If radio.Checked Then
-        '        age = radio.Text
-        '    End If
-        'Next
-        '-> inconvénient : parcours toute la liste même si il trouve un checked avant
-
-        '3ème méthode
-        'For Each radio In gpbAge.Controls
-        '    If radio.Checked Then
-        '        age = radio.Text
-        '    End If
-        'Next
 
         '4ème methode
         i = 0
@@ -162,7 +121,18 @@
 
     End Sub
 
-    Private Sub rdbNeuf_CheckedChanged(sender As Object, e As EventArgs) Handles rdbNeuf.CheckedChanged
+    Private Sub cmdClient_Click(sender As Object, e As EventArgs) Handles cmdClient.Click
+
+        If fenClient Is Nothing Then
+            fenClient = New frmClient 'Design pattern : singleton
+        ElseIf fenClient.IsDisposed Then
+            fenClient = New frmClient
+        End If
+
+
+        fenClient.Show()  'affichage objet
+        fenClient.BringToFront()
+        Me.Close()
 
     End Sub
 End Class

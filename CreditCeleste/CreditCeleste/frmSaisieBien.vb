@@ -11,8 +11,6 @@ Public Class frmSaisieBien
     Private Sub frmSaisieBien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-
-
         lblAncVeh.Text = uneVoiture.getAncVehicule()
         txtDate1Imm.Text = uneVoiture.getDatePremiereImmatriculation()
         txtAnnMod.Text = uneVoiture.getAnneeModele()
@@ -82,6 +80,7 @@ Public Class frmSaisieBien
                                   ()
                                   VALUES
                                   (lblAncVeh.Text, txtDate1Imm.Text, txtAnnMod.Text, txtNumImm.Text, txtNumSer.Text, txtPuiss.Text)"
+
         Try
 
             '//connexion à la BDD
@@ -120,6 +119,21 @@ Public Class frmSaisieBien
         fenCredit.BringToFront()
         Me.Close()
 
+
+    End Sub
+
+    Private Sub cmdClient_Click(sender As Object, e As EventArgs) Handles cmdClient.Click
+
+        If fenClient Is Nothing Then
+            fenClient = New frmClient 'Design pattern : singleton
+        ElseIf fenClient.IsDisposed Then
+            fenClient = New frmClient
+        End If
+
+
+        fenClient.Show()  'affichage objet
+        fenClient.BringToFront()
+        Me.Close()
 
     End Sub
 End Class

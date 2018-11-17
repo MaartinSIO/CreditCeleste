@@ -51,8 +51,8 @@ Public Class frmAccueil
             While (oReader.Read())
                 i = i + 1
                 '//affiche tout les lignes de la requete
-                Dim unVendeur(i) As New Vendeur("nomVendeur", "prenomVendeur")
-                uneConcession.lesVendeurs.Add(unVendeur(i))
+                ' Dim unVendeur(i) As New Vendeur("nomVendeur", "prenomVendeur")
+                ' uneConcession.lesVendeurs.Add(unVendeur(i))
 
             End While
 
@@ -66,24 +66,22 @@ Public Class frmAccueil
 
 
 
-        uneConcession.SetConcession("garage du parc", "rue des rossignol") 'si declaration avec NEW
-        'ou uneConcession= NewConcession("garage du parc", "rue des rossignol")
+        'uneConcession.SetConcession("garage du parc", "rue des rossignol") 'si declaration avec NEW
+        uneConcession = New Concession("garage du parc", "rue des rossignol")
 
         'creation vendeur
-        'Dim unVendeur As New Vendeur("M", "SCHULTZ", "Martin")
+        Dim unVendeur As New Vendeur("M", "SCHULTZ", "Martin")
         Dim un2Vendeur As New Vendeur("Mme", "Quatre", "Quart")
         Dim un3Vendeur As New Vendeur("Mme", "Twu", "pack")
 
-        'uneConcession.lesVendeurs.Add(unVendeur)
+        uneConcession.lesVendeurs.Add(unVendeur)
         uneConcession.lesVendeurs.Add(un2Vendeur)
         uneConcession.lesVendeurs.Add(un3Vendeur)
 
 
-        'For Each row In Vendeur(i)
-        '    i = i + 1
-        '    uneConcession.lesVendeurs.Add(Vendeur(i))
-
-        'Next
+        'While oReader.Read()
+        '    Dim unVendeur As New Vendeur(Trim)
+        'End While
 
     End Sub
 End Class
